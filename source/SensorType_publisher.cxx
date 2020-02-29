@@ -93,7 +93,7 @@ extern "C" int publisher_main(int domainId, int sample_count)
     const char *type_name = NULL;
     int count = 0;  
     /* CUST: update data write freq from every 4s to 0.1s */
-    DDS_Duration_t send_period = {0,100000000};
+    DDS_Duration_t send_period = {1,0};
 
     /* To customize participant QoS, use 
     the configuration file USER_QOS_PROFILES.xml */
@@ -180,7 +180,7 @@ extern "C" int publisher_main(int domainId, int sample_count)
         /* Modify the data to be sent here */
         /* CUST: update val_0 */
         instance->val_0 = count;
-        if (count > 50 ) count = 0;
+        //if (count > 50 ) count = 0;
 
         retcode = SensorData_writer->write(*instance, instance_handle);
         if (retcode != DDS_RETCODE_OK) {
