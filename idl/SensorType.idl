@@ -1,0 +1,7 @@
+struct SensorData {
+	string sensorName;
+	float val_0;
+	float val_1;
+	float val_2;
+	float quality;
+};
