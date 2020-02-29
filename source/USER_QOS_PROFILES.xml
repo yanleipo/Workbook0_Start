@@ -137,7 +137,8 @@ XML" chapter in the RTI Connext DDS Core Libraries User's Manual.
         <qos_profile name="SensorType_Profile" base_name="BuiltinQosLib::Generic.StrictReliable" is_default_qos="true">
             <base_name>
                 <element>BuiltinQosSnippetLib::QosPolicy.Reliability.Reliable</element>
-                <element>BuiltinQosSnippetLib::QosPolicy.Durability.TransientLocal</element>
+                <!-- <element>BuiltinQosSnippetLib::QosPolicy.Durability.TransientLocal</element> -->
+                <element>BuiltinQosSnippetLib::QosPolicy.Durability.Persistent</element>
             </base_name>
             <!-- QoS used to configure the data writer created in the example code -->                
             <datawriter_qos>
